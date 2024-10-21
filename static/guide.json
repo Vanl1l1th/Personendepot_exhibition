@@ -1,0 +1,33 @@
+
+  [
+    {
+      "titel":"What are personal details?",
+      "text":"Personal details can be stories, events, things, dreams, anecdotes, banalities, artifacts, documents, digital imprints and so on. All these informations reflect your personality, which have  an emotional connection with yourself and make you tangible.",
+      "active":"guideActive"
+    },
+    {
+      "titel":"In what language may I write?",
+      "text":"You can choose the language in which you feel most comfortable.",
+      "active":"guidePasiv"
+    },
+    {
+      "titel":"Rules for uploading?",
+      "text":"There is only one rule: you may only upload images that do not show names or people.",
+      "active":"guidePasiv"
+    },
+    {
+      "titel":"How can I upload?",
+      "text":"You can upload photos, screenshots, links (in the text field), etc.",
+      "active":"guidePasiv"
+    },
+    {
+      "titel":"What is a personal reference?",
+      "text":"This means the personal reference to the entry.",
+      "active":"guidePasiv"
+    },
+    {
+      "titel":"What should be uploaded?",
+      "text":"Basically, you can upload anything as long as it is somehow related to you as a person. Here are some areas you could show of yourself: Living environment (fridge, bed, shelves, etc.), Government (doctor's report, criminal record, taxes, etc.), Entertainment (internet history, music playlists, books, etc.), Social (hobbies, relationships, family, etc.), Memories (drawings, diary entries, etc.) Conversations (written exchanges, chats, letters, etc.).",
+      "active":"guidePasiv"
+    }
+    ]

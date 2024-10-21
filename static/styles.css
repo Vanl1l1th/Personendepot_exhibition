@@ -1,0 +1,918 @@
+:root {
+  --bodyBg:  #E5E5E5;
+  --menuBg: #383838;
+  --progressBar: #FF6230;
+  --highlight: #FF6230;
+  --lightBlack: #7D7D7D;
+}
+
+@font-face {
+  font-family: EduWhyte-Black;
+  src: url(EduWhyteInktrap-Black.woff);
+}
+@font-face {
+  font-family: EduWhyte-Regular;
+  src: url(EduWhyteInktrap-Regular.woff);
+}
+
+body p{
+  font-family: EduWhyte-Regular;
+  font-size: 16px;
+  line-height: 29.5px;
+}
+body h1{
+  font-size: 36px;
+  text-transform: uppercase;
+}
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: EduWhyte-Black;
+}
+.highlight{
+  color: var(--highlight) !important;
+}
+#bodyContainer{
+  background-color: red;
+}
+
+
+/* Overrides default styled accordion styles (too much bottom padding) */
+
+.offline{
+  background-color: red !important;
+}
+
+/* topnav */
+.topnav {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+      top: 0;
+  background-color: white;
+
+}
+
+.topnav p {
+  display: inline-block;
+  text-align: center;
+  padding: 22px 12px;
+  text-decoration: none;
+  height: 60px;
+  margin-bottom: 0;
+  font-family: EduWhyte-Regular;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.topnav .navright{
+  right: 13px;
+  position: fixed;
+}
+.topnav .navleft{
+  padding-left: 0px;
+  left: 25px;
+  position: fixed;
+  font-family: EduWhyte-Black;
+}
+.topnav .dropoffnav{
+  font-family: EduWhyte-Black;
+}
+
+.topnav p:hover {
+  cursor: pointer;
+}
+
+.topnav p.active {
+  text-decoration: underline;
+}
+/* dropdown*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ddd;
+  min-width: 120px;
+  height: 75px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 7px 16px 0px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: EduWhyte-Regular;
+}
+.dropdown-content .dropdownLogout{
+  cursor: pointer;
+}
+.dropdown-content #dropdownCode{
+      height: 16px;
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+/*intro key*/
+.skipIntro{
+  cursor: pointer;
+  font-family: EduWhyte-Black;
+}
+.introNext{
+  margin-top: 530px;
+    margin-left: 25px;
+    cursor: pointer;
+    font-family: EduWhyte-Black;
+    position: fixed;
+    text-transform: uppercase;
+}
+.introProgress{
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.introProgress .introRect{
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  background-color: #C4C4C4;
+}
+
+/*login key*/
+.loginText{
+  font-size: 24px;
+    margin: 0;
+}
+.loginForm{
+  width: 670px;
+  position: fixed;
+  margin-left: 25px;
+  margin-top: 180px;
+}
+.loginForm h1{
+  margin: 0px 0 30px 0;
+  text-transform: uppercase;
+  font-family: EduWhyte-Black;
+  font-size: 36px;
+}
+.loginForm h4{
+  text-transform: uppercase;
+  font-family: EduWhyte-Black;
+}
+.loginDisplayCode{
+  position: relative;
+  margin-left: 50%;
+  left: -180px;
+  margin-top: 140px;
+  width: 380px;
+}
+ .loginDisplayCode h1{
+  font-size: 70px;
+  text-transform: capitalize;
+  font-family: EduWhyte-Black;
+  margin: 0 0 35px 0;
+}
+.loginDisplay{
+  display: none;
+}
+.loginScreenshot{
+  text-align: center;
+  font-family: 'EduWhyte-Black';
+  color: var(--progressBar);
+}
+.loginDisplay.active{
+  display: block;
+}
+.loginInput{
+  box-sizing: border-box;
+ border: none;
+ border-bottom: 1px solid black;
+ background-color:var(--bodyBg);
+ width: 100%;
+}
+.loginButton{
+  cursor: pointer;
+}
+.loginButtonRight{
+  text-align: right;
+  cursor: pointer;
+}
+.generateButton{
+  text-decoration: underline;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.loginButtonBlock .loginButton{
+  display: inline-block;
+}
+.loginButtonProfil{
+  position: fixed;
+    top: 560px;
+    margin-left: 50%;
+    font-family: 'EduWhyte-Black';
+    cursor: pointer;
+    left: 90px;
+}
+
+.dropoffExhibition{
+    margin-top: 140px;
+    text-align: center;
+    font-family: 'EduWhyte-Black';
+    word-spacing: 5px;
+}
+.exhibtionImg{
+  position: relative;
+    width: 680px;
+    margin-left: 50%;
+    left: -340px;
+}
+
+/*Profil*/
+.profilContainer{
+  width: 480px;
+    position: relative;
+    margin-left: 50%;
+    margin-top: 10%;
+    padding-bottom: 5%;
+    left: -240px;
+        z-index: 0;
+}
+.profilContainer h4{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: EduWhyte-Black;
+}
+.profilInfo{
+  text-align: center;
+  position: fixed;
+  margin-left: 50%;
+  left: -67px;
+  top: 20px;
+  z-index: 1;
+}
+.profilInfo p{
+  margin-bottom: 5px;
+  color: var(--lightBlack);
+}
+.profilHighlight{
+  text-decoration: underline;
+  font-family: EduWhyte-Regular;
+  color: var(--lightBlack) !important;
+}
+.profilAdd{
+  margin: 25px 0;
+  padding: 30px 0;
+  cursor: pointer;
+  border: 1px dashed #000000;
+}
+
+.profilCard{
+  width: 100%;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.profilCard .offlineBlur{
+  filter: blur(10px);
+}
+.profilCard .offlineTitel {
+  color: var(--progressBar);
+  font-family: EduWhyte-Black;
+  text-transform: uppercase;
+position: relative;
+text-align: center;
+top: -100px;
+}
+.profilCard .onlineTitel {
+  display: none;
+}
+.profilCardTitel {
+  text-align: center;
+  padding: 0;
+  text-transform: capitalize;
+
+}
+
+/*Collection*/
+.collectionContainer{
+  display: flex;
+  width: 99%;
+  margin: 56px 0px 10% -1px;
+}
+.collectionColumn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 7px;
+}
+.collectionCard{
+    cursor: pointer;
+    width: 100%;
+    margin: 7px;
+    transition: all .2s ease-in-out;
+}
+.collectionCard:hover{
+  transform: scale(1.04);
+}
+/*singel Product*/
+.productContainer{
+  width: 100%;
+  position: relative;
+  margin: 72px 25px;
+}
+.productInfo{
+  display: inline-block;
+    width: 42%;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 0px;
+}
+.productInfo h3{
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.productInfo h4{
+  margin-top: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: EduWhyte-Black;
+}
+.productInfo p{
+  font-size: 16px;
+line-height: 20px;
+  font-family: EduWhyte-Black;
+}
+.productImage{
+  display: inline-block;
+  width: 48%;
+}
+
+/*about*/
+.aboutPlan{
+  display: none;
+    position: fixed;
+    left: 520px;
+    top: 100px;
+    width: 750px;
+}
+.aboutHover{
+    width: 231px;
+    height: 50px;
+    position: absolute;
+    top: 590px;
+    left: 20px;
+    cursor: pointer;
+}
+.aboutHover:hover .aboutPlan {display: inline-block;}
+.aboutContainer{
+  width: 670px;
+  position: absolute;
+  margin-top: 76px;
+  margin-left: 25px;
+  padding-bottom: 50px;
+  display: inline-block;
+      z-index: 0;
+}
+.aboutContainer p{
+  font-size: 24px;
+  line-height: 29.5px;
+}
+.aboutContainer .aboutUppercase{
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1;
+  background-color: white;
+}
+.aboutContainer .aboutBold{
+  font-family: EduWhyte-Black;
+  cursor: pointer;
+}
+.aboutContainer .aboutIntro{
+  margin-bottom: 35px;
+}
+/*unfolding about*/
+.unfoldArrow{
+  display: -webkit-inline-box;
+  transform: rotate(90deg);
+  transition: 0.4s ease all;
+}
+.infoldArrow{
+  display: -webkit-inline-box;
+  transform: rotate(0deg);
+  transition: 0.4s ease all;
+}
+.unfoldText{
+  opacity: 1;
+  height: 110px;
+  margin-bottom: 50px;
+  transition: opacity 0.6s, height 0.2s;
+  transition-timing-function: ease-in-out;
+  z-index: 0;
+}
+.infoldText{
+  height: 0px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.1s, height 0.2s;
+  transition-timing-function: ease-in-out;
+  z-index: -1;
+  position: relative;
+}
+.unfoldTextDigital{
+  opacity: 1;
+  height: 225px;
+  margin-bottom: 50px;
+  transition: opacity 0.6s, height 0.2s;
+  transition-timing-function: ease-in-out;
+  z-index:-1;
+}
+.unfoldTextPhysical{
+  opacity: 1;
+  height: 370px;
+  margin-bottom: 50px;
+  transition: opacity 0.6s, height 0.2s;
+  transition-timing-function: ease-in-out;
+  z-index: -1;
+}
+.unfoldTextAbstract{
+  opacity: 1;
+  height: 425px;
+  margin-bottom: 50px;
+  transition: opacity 0.6s, height 0.2s;
+  transition-timing-function: ease-in-out;
+  z-index:-1;
+}
+/*create*/
+.createContainer{
+  width: 780px;
+  margin-top: 90px;
+  margin-left: 50%;
+  left: -390px;
+  position: absolute;
+}
+.createContainer .newEntry{
+  text-align: center;
+    margin-bottom: 25px;
+}
+.createClose{
+  font-size: 24px;
+  position: absolute;
+  margin-left: 50%;
+  left: 436px;
+  cursor: pointer;
+      top: 70px;
+  font-family: EduWhyte-Regular;
+}
+.createContainer p{
+  font-family: EduWhyte-Black;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.createSubcon{
+  display: inline-block;
+}
+.createMedia{
+  width: 500px;
+  border: 1px dashed #000000;
+  display: inline-flex;
+  height: 450px;
+  margin-right: 7px;
+}
+.createMedia .imageInput{
+    margin-top: 210px;
+    margin-left: 160px;
+    color: #C4C4C4;
+    font-family: EduWhyte-Black;
+    position: absolute;
+}
+.createMedia img{
+  width: 100%;
+}
+.createMedia input[type=file]::file-selector-button{
+  background-color: #C4C4C4;
+  width: 100px;
+  height: 60px;
+  border-radius: 30px;
+  border:none;
+  font-family: EduWhyte-Regular;
+}
+.createText{
+  width: 270px;
+}
+.createText textarea{
+  background-color: var(--bodyBg);
+  border: 1px solid black;
+}
+.createText ::placeholder{
+  padding: 7px;
+  color: var(--lightBlack);
+  font-family: EduWhyte-Regular;
+}
+.createTitel{
+  display: block;
+  width: 270px;
+  margin-bottom: 7px;
+  height: 120px;
+}
+.createDescription{
+  width: 270px;
+  height: 320px;
+}
+.createContainer .upload{
+  text-align: right;
+    margin-top: 25px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.createContainer .createLoading{
+  background-color: var(--progressBar);
+    height: 450px;
+    width: 778px;
+    position: absolute;
+    filter: opacity(0.5);
+    z-index: 1;}
+  .createContainer .createLoading h1{
+    text-align: center;
+    margin-top: 200px;
+    font-family: EduWhyte-Black;
+  }
+
+/*popup*/
+.createPopup{
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  position: fixed;
+  background-color: var(--bodyBg);
+}
+.createPopup p{
+  color: var(--lightBlack);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.createPopup .myProfile{
+  text-align: left;
+    margin-top: 25px;
+    margin-left: 575px;
+    cursor: pointer;
+    font-family: EduWhyte-Black;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.createPopup .popUpTitel{
+  font-family: EduWhyte-Black;
+  margin-top: 200px;
+}
+/*the guide*/
+.theGuide {
+  width: 500px;
+  margin-top: 670px;
+  margin-left: 50%;
+  padding-bottom: 25px;
+  left: -390px;
+  position: absolute;
+}
+.theGuide .guideSection{
+  color: var(--lightBlack);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.theGuide .guideTitel{
+  font-family: EduWhyte-Black;
+}
+.theGuide .guideActive{
+  display: block;
+}
+.theGuide .guidePasiv{
+  display: none;
+}
+/* mobile stuff not display*/
+.mobileMenu{
+  display: none;
+}
+.mobileModalShow{
+  display: none;
+}
+.mobileModalHide{
+  display: none;
+}
+
+
+/* mobile size*/
+@media only screen and (max-width: 600px) {
+
+/* nav*/
+body p{
+  line-height: 23px;
+  font-size: 16px;
+}
+.topnav{
+  height: 58px;
+
+}
+  .topnav .navleft {
+      left: 2.5%;
+      position: fixed;
+      font-family: EduWhyte-Black;
+  }
+  .topnav p{
+    padding: 18px 0;
+    font-size: 16px;
+  }
+  .topnav .navright {
+    display: none;
+}
+.mobileMenu{
+  display: block;
+    text-align: right;
+    margin-right: 2.5%;
+    cursor: pointer;
+}
+.mobileMenu p{
+  font-family: 'EduWhyte-Black';
+  font-size: 16px;
+}
+.mobileMenu .personMobile{
+  position: absolute;
+  top: 35px;
+  right: 2.5%;
+  padding: 0 !important;
+  font-family: EduWhyte-Regular;
+  color: var(--lightBlack);
+}
+.mobileModalShow{
+  display: block;
+}
+.mobileOverlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: var(--progressBar);
+}
+.mobileOverlay p{
+  margin-left: 2.5%;
+  padding-top: 10px;
+  margin-bottom: 10px;
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+    font-family: EduWhyte-Regular;
+}
+.mobileOverlay p.active {
+  text-decoration: underline;
+}
+.mobileOverlay .mobileProfile{
+  margin: 40px 0 0 0;
+}
+.mobileOverlay .mobileCode{
+  margin: 0 0 40px 0;
+}
+.mobileOverlay .mobileCode p{
+  color: #c7c7c7;
+      margin: 0;
+}
+.mobileClose{
+  text-align: right;
+  margin-right: 2.5%;
+}
+/* collection*/
+    .collectionContainer {
+      display: block;
+      margin: 70px 2.5%;
+      width: 95%;
+  }
+  .collectionColumn {
+      display: block;
+      width: 100%;
+      margin: 0;
+  }
+  .collectionCard {
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+  }
+  .profilCardTitel {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 5px;
+}
+/* about */
+.aboutHover{
+  display: none;
+}
+
+.aboutContainer {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 2.5% 50px 2.5%;
+    margin-top: 65px;
+}
+.aboutContainer p {
+    line-height: 26px;
+    font-size: 20px;
+}
+.aboutContainer .aboutUppercase{
+  margin-bottom: 5px;
+}
+.aboutContainer .aboutIntro {
+  margin-bottom: 26px;
+}
+.unfoldText{
+  margin-bottom: 26px;
+  height: 100%;
+}
+.unfoldTextDigital{
+  margin-bottom: 26px;
+  height: 100%;
+}
+.unfoldTextPhysical{
+  margin-bottom: 26px;
+  height: 100%;
+}
+.unfoldTextAbstract{
+  margin-bottom: 26px;
+  height: 100%;
+}
+
+/* prodcut view */
+.productInfo p {
+  line-height: 26px;
+  font-size: 20px;
+      margin-bottom: 14px;
+}
+.productContainer {
+    width: 100%;
+    position: relative;
+    margin: 80px 0;
+    padding: 2.5%;
+}
+.productInfo {
+  display: block;
+  width: 85%;
+  position: absolute;
+  margin-left: 2.5%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.productImage {
+    display: block;
+    width: 100%;
+}
+.productInfo h3 {
+    font-size: 16px;
+}
+.productInfo h4 {
+    font-size: 16px;
+    margin-top: 14px;
+}
+  /*login*/
+.loginForm {
+    width: 100%;
+    position: fixed;
+    margin-top: 90px;
+    padding: 2.5%;
+    margin-left: 0;
+}
+.loginForm h1{
+  font-size: 28px;
+  margin: 15px 0;
+}
+.loginText{
+  line-height: 26px;
+  font-size: 20px;
+}
+.introNext {
+  margin-top: 450px;
+  cursor: pointer;
+  font-family: EduWhyte-Black;
+  text-align: right;
+  margin-left: 81%;
+}
+.introProgress {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.loginButtonProfil {
+    padding-left: 0px;
+}
+.loginDisplayCode {
+    position: relative;
+    margin-left: 0;
+    left: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+.loginForm .loginDisplayCode h1{
+  margin:0 0 10px 0;
+  font-size: 36px;
+}
+.loginButtonProfil {
+    position: fixed;
+    top: 370px;
+    margin-left: 50%;
+    font-family: 'EduWhyte-Black';
+    cursor: pointer;
+    left: 4%;
+}
+/*create*/
+.profilContainer {
+    width: 100%;
+    position: relative;
+     margin-left: 0;
+    margin-top: 130px;
+    padding-bottom: 5%;
+     left: 0;
+}
+.profilInfo {
+  text-align: left;
+  position: fixed;
+  margin-left: 2.5%;
+  left: 0;
+  top: 35px;
+}
+.createContainer {
+    width: 100%;
+    margin-top: 90px;
+    margin-left: 0;
+    left: 0;
+    position: absolute;
+    padding: 0 2.5%;
+}
+.theGuide {
+    width: 100%;
+    margin-top: 940px;
+    margin-left: 0;
+    padding: 0 2.5% 5% 2.5%;
+    left: 0;
+    position: absolute;
+    display: block;
+}
+.theGuide p{
+  line-height: 26px;
+  font-size: 20px;
+}
+.createMedia {
+    width: 100%;
+    border: 1px dashed #000000;
+    display: block;
+    height: 236px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+}
+.createText {
+    width: 100%;
+    display: block;
+}
+.createMedia .imageInput {
+  width: 70%;
+  margin-top: 101px;
+  margin-left: 15%;
+  left: 9px;
+  color: #C4C4C4;
+  font-family: EduWhyte-Black;
+  position: absolute;
+}
+ .createClose {
+   left: 0;
+   margin-left: 92%;
+   font-size: 24px;
+   position: absolute;
+   cursor: pointer;
+   top: 65px;
+   font-family: EduWhyte-Regular;
+}
+.createTitel {
+    display: block;
+    width: 100%;
+    margin-bottom: 7px;
+    height: 120px;
+}
+.createDescription {
+    width: 100%;
+    height: 320px;
+}
+.createContainer .createLoading {
+    background-color: var(--progressBar);
+    height: 689px;
+    width: 95%;
+    margin-top: -150px;
+    position: fixed;
+    filter: opacity(0.5);
+    z-index: 1;
+}
+.createPopup p{
+  line-height: 26px;
+  font-size: 20px;
+}
+.createPopup .myProfile{
+      margin-left: 0;
+      text-align: right;
+}
+
+}
